@@ -1,0 +1,9 @@
+JavaScript-2 Syllabus
+
+1. Dom
+2. Dom PSC
+3. Local Storage
+4. E commerce
+5. Js inbuilt & scopes
+6. Debugging with VS code
+7. PSC Local Storage

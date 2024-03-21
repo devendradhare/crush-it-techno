@@ -1,0 +1,39 @@
+1 Sum of Numbers:
+Write a program to calculate the sum of numbers from 1 to a given positive integer n using a while loop.
+Input: A positive integer n.
+
+2 Factorial Calculation:
+Write a program to calculate the factorial of a given non-negative integer n using a while loop.
+Input: A non-negative integer n.
+
+3 Reverse Number:
+Write a program to reverse a given integer using a while loop. For example, if the input is 123, the output should be 321.
+Input: An integer.
+
+4 Prime Number Check:
+Write a program to check whether a given integer is a prime number or not using a while loop.
+Input: An integer.
+
+5 Fibonacci Series:
+Write a program to generate the Fibonacci series up to a specified number of terms using a while loop.
+Input: Number of terms in the series.
+
+6 Palindrome Check:
+Write a program to check whether a given integer is a palindrome or not using a while loop.
+Input: An integer.
+
+7 Power Calculation:
+Write a program to calculate the power of a given base raised to a specified exponent using a while loop.
+Input: Base and exponent (both integers).
+
+8 GCD Calculation:
+Write a program to find the greatest common divisor (GCD) of two given integers using the Euclidean algorithm and a while loop.
+Input: Two integers.
+
+9 Sum of Digits:
+Write a program to calculate the sum of digits of a given integer using a while loop.
+Input: An integer.
+
+10 Number of Digits:
+Write a program to count the number of digits in a given integer using a while loop.
+Input: An integer.

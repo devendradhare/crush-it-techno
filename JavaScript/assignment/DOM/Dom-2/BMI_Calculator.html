@@ -1,0 +1,143 @@
+<!-- Instructions
+
+BMI Calculator
+
+Create an application which calculates BMI (Body Mass Index)
+
+Your app should have 2 input boxes
+Take weight in kgs from user
+Take height in meters from user
+
+Based on entered height and weight calculate BMI of that person
+Here is the formula for manually calculating BMI  BMI = (weight) / (height * height)
+From the obtained BMI result, display whether the person is
+
+UnderWeight - bmi <= 18.4
+Normal Weight - bmi >= 18.5 && bmi <= 24.9
+Overweight - bmi >= 25 && bmi <= 29.9
+Obese - bmi >= 30
+
+Hint: use If conditions -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+  </head>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+      display: flex;
+      height: 100vh;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    section {
+      box-shadow: 1px 2px 5px 5px rgba(189, 189, 189, 0.44);
+      padding: 30px;
+      /* gap: 10px; */
+      margin-bottom: 50px;
+    }
+    section > div {
+      display: flex;
+    }
+    input {
+      height: 40px;
+      padding: 0 10px;
+      font-size: 1.2rem;
+      outline: none;
+    }
+    .inputs {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    #curlyBracket {
+      font-size: 70px;
+      color: rgba(87, 87, 87, 0.84);
+    }
+    #result {
+      display: flex;
+      align-items: center;
+      font-size: 27px;
+      font-weight: bold;
+      color: rgba(87, 87, 87, 0.84);
+    }
+    button {
+      margin-top: 30px;
+      height: 30px;
+      padding: 0 10px;
+      background: rgb(77, 77, 221);
+      color: white;
+      height: 32px;
+      border-radius: 3px;
+    }
+    #btnDiv {
+      display: flex;
+      flex-direction: row-reverse;
+    }
+    #errorMsg {
+      text-align: center;
+      color: red;
+    }
+  </style>
+  <body>
+    <section>
+      <p id="errorMsg"></p>
+      <div class="displayHeading">BMI Calculator</div>
+      <div>
+        <div class="display"></div>
+        <div class="inputs">
+          <input type="number" id="weight" placeholder="weight in KG" />
+          <input type="number" id="height" placeholder="height in Metre" />
+        </div>
+        <span id="curlyBracket">}</span>
+        <span id="result">result</span>
+      </div>
+      <div id="btnDiv">
+        <button id="CalculateBMI">Calculate BMI</button>
+      </div>
+    </section>
+    <div class="instructions">
+      UnderWeight - bmi <= 18.4 <br />
+      Normal Weight - bmi >= 18.5 && bmi <= 24.9 <br />
+      Overweight - bmi >= 25 && bmi <= 29.9 <br />
+      Obese - bmi >= 30 <br />
+    </div>
+  </body>
+  <script>
+    document
+      .querySelector("#CalculateBMI")
+      .addEventListener("click", CalculateBMI);
+
+    function CalculateBMI() {
+      let weight = document.getElementById("weight").value;
+      let height = document.getElementById("height").value;
+      let errorMsg = document.getElementById("errorMsg");
+      
+      if (!weight || !height) {
+        errorMsg.innerHTML = "please Enter all the fildes";
+        return;
+      } else if (height == 0) errorMsg.innerHTML = "Can not divide by zero";
+      else errorMsg.innerHTML = "";
+
+      let result = document.getElementById("result");
+      let bmi = (+weight / (+height * +height)).toFixed(2);
+
+      let status;
+      if (bmi <= 18.4) status = "underweight";
+      else if (bmi <= 24.9) status = "normal weight";
+      else if (bmi <= 29.9) status = "overweight";
+      else status = "obese";
+      
+      result.innerHTML = bmi + "<br/>" + status;
+    }
+  </script>
+</html>

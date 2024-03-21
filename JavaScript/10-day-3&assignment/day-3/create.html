@@ -1,0 +1,51 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="main"></div>
+  </body>
+
+  <script>
+    //     let P = document.createElement("p");
+    //     let h1 = document.createElement("h1");
+
+    //     let div = document.querySelector("div")
+
+    // //    div.appendChild(P,h1) its select just 1st one
+    // div.append(P,h1)  its select all
+
+    // let colors = ["red", "green", "yellow", "blue", "purple"];
+    // let names = ["devendra", "Poornima", "Golesh", "Sachin", "Diksha"];
+
+    let data = [
+      { name: "devendra", color: "red" },
+      { name: "Poornima", color: "skyblue" },
+      { name: "Golesh", color: "green" },
+      { name: "Sachin", color: "pink" },
+      { name: "diksha", color: "blue" },
+    ];
+
+    data.forEach(function (el) {
+      //console.log(el,index);
+      let h1 = document.createElement("h1");
+      h1.innerText = el.name;
+      h1.style.backgroundColor= el.color;
+
+      let div = document.querySelector("div");
+
+        div.append(h1);
+    });
+
+    // for (let i = 0; i < data.length; i++) {
+    //   let h1 = document.createElement("h1");
+    //   h1.innerText = data[i].name;
+    //   h1.style.color = data[i].color;
+    //   let div = document.querySelector("div");
+
+    //   div.append(h1);
+    // }
+  </script>
+</html>

@@ -1,0 +1,52 @@
+If, If-else, If-else ledder Question
+
+1 If Statement Question:
+Write a program that takes an integer as input and determines whether it is even or odd. Output "Even" if the number is even, and "Odd" if it's odd.
+Input: An integer number.
+
+2 If-Else Statement Question:
+Write a program to determine whether a given year is a leap year or not. If the year is divisible by 4, it is a leap year. However, if it is divisible by 100, it is not a leap year unless it is also divisible by 400. Output "Leap Year" if it's a leap year, and "Not a Leap Year" otherwise.
+Input: A year (integer).
+
+3 If-Else-If Ladder Question:
+Write a program that takes three integers as input and prints the largest among them. If all are equal, output any one of them.
+Input: Three integers.
+
+4 Nested If-Else Question:
+Write a program to determine the grade of a student based on their marks. The criteria for grading are as follows:
+
+Grade A: Marks >= 90
+Grade B: Marks >= 80 and < 90
+Grade C: Marks >= 70 and < 80
+Grade D: Marks >= 60 and < 70
+Grade F: Marks < 60
+Output the corresponding grade based on the marks obtained.
+Input: Marks obtained by a student (integer).
+
+5 Multiple Conditions in If Statement Question:
+Write a program that takes three integers as input representing the lengths of the sides of a triangle. Determine and output whether the triangle is equilateral, isosceles, or scalene.
+Input: Three integers representing the lengths of the sides of a triangle.
+
+6 Boolean Logic in If-Else Question:
+Write a program that takes a year as input and determines whether it is a leap year or not according to the following conditions:
+
+If the year is divisible by 4, it's a leap year.
+If it is divisible by 100, it is not a leap year unless it is also divisible by 400.
+Output "Leap Year" if it's a leap year, and "Not a Leap Year" otherwise.
+Input: A year (integer).
+
+7 If-Else with Array Processing Question:
+Write a program that takes an array of integers as input and finds the smallest and largest element in the array. Output both the smallest and largest elements.
+Input: An array of integers.
+
+8 If-Else with Recursion Question:
+Write a recursive function to find the factorial of a non-negative integer. Output the factorial of the given integer.
+Input: A non-negative integer for which the factorial needs to be calculated.
+
+9 If-Else with String Processing Question:
+Write a program that takes a string as input and determines whether it is a palindrome or not. Output "Palindrome" if it's a palindrome, and "Not a Palindrome" otherwise.
+Input: A string.
+
+10 If-Else with File Processing Question:
+Write a program that reads integers from a text file. Classify each integer as positive or negative, and calculate the sum of positive integers and the sum of negative integers separately. Output both the sums.
+Input: Integers stored in a text file.

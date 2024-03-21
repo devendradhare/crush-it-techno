@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>section</title>
+    <style>
+      section {
+        width: 80%;
+        margin: auto;
+      }
+      .div1 {
+        border-radius: 15px;
+        color: white;
+        padding: 30px;
+        height: 200px;
+        background: rgb(46, 56, 148);
+      }
+      .div1 > button {
+        border-radius: 10px;
+        height: 30px;
+      }
+      .div2 {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+      }
+      .cardImg {
+        background: #9f9f9f;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* width: 150px; */
+      }
+      .card {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      }
+      .mid_h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      .mid_h1 + p {
+        text-align: center;
+        color: gray;
+      }
+      .bigCards {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 15px;
+      }
+      .bigCards > div {
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
+      }
+      .bigCardImg {
+        background: gray;
+        height: 150px;
+      }
+      .name{
+        font-weight: bolder;
+        font-size: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="div1">
+        <h2>You are in safe hands</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+        <button>Know More</button>
+      </div>
+      <div class="div2">
+        <div class="card">
+          <div class="cardImg">img</div>
+          <h3>Instant Video Consultation</h3>
+          <span>Contect within 60 secs</span>
+        </div>
+        <div class="card">
+          <div class="cardImg">img</div>
+          <h3>Instant Video Consultation</h3>
+          <span>Contect within 60 secs</span>
+        </div>
+        <div class="card">
+          <div class="cardImg">img</div>
+          <h3>Instant Video Consultation</h3>
+          <span>Contect within 60 secs</span>
+        </div>
+        <div class="card">
+          <div class="cardImg">img</div>
+          <h3>Instant Video Consultation</h3>
+          <span>Contect within 60 secs</span>
+        </div>
+        <div class="card">
+          <div class="cardImg">img</div>
+          <h3>Instant Video Consultation</h3>
+          <span>Contect within 60 secs</span>
+        </div>
+        <div class="card">
+          <div class="cardImg">img</div>
+          <h3>Instant Video Consultation</h3>
+          <span>Contect within 60 secs</span>
+        </div>
+      </div>
+      <h1 class="mid_h1">Book an appointment for an in-clinic consultation</h1>
+      <p>Find experienced doctors across all specialties</p>
+      <div class="bigCards">
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+        <div>
+          <div class="bigCardImg"></div>
+          <div class="name">Dentist</div>
+          <p>Teething trouble? Schedule a dental Checkup</p>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

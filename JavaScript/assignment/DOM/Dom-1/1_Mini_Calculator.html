@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Calculator</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      /* border: 1px solid; */
+    }
+    body {
+      /* background: #c2c2c2; */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    section {
+      box-shadow: 1px 3px 10px 10px hsla(0, 0%, 62%, 0.352);
+      padding: 30px;
+      /* height: 50%; */
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    input {
+      height: 30px;
+      border: none;
+      outline: none;
+      border-bottom: 1px solid gray;
+      /* background: rgb(214 214 214 / 50%); */
+      /* border-radius: 8px; */
+      padding: 0 8px;
+    }
+    .display {
+      margin: 10px 10px;
+
+      display: flex;
+      /* gap: 10px; */
+    }
+    #result {
+      display: flex;
+      align-items: center;
+    }
+    #symbol {
+      display: flex;
+      align-items: center;
+      font-weight: bolder;
+      font-size: 22px;
+    }
+    #equal {
+      display: flex;
+      align-items: center;
+      font-weight: bolder;
+      font-size: 22px;
+      margin: 10px;
+    }
+    .btns_div {
+      display: flex;
+      gap: 30px;
+      margin: 5px 0 20px 0;
+    }
+    .btns_div > button {
+      padding: 5px;
+      text-transform: uppercase;
+      font-weight: bolder;
+      /* border-radius: 5px; */
+      background: none;
+      border: none;
+      border-bottom: 1px solid;
+
+      /* box-shadow: 1px 2px 5px 5px rgba(185, 185, 185, 0.486); */
+    }
+    #errorMsg {
+      color: red;
+    }
+    .borders {
+      border: 5px dashed 5px;
+    }
+  </style>
+  <body>
+    <section>
+      <span id="errorMsg"></span>
+      <div class="display">
+        <input type="number" id="value1" placeholder="value1" />
+        <span id="symbol">?</span>
+        <input type="number" id="value2" placeholder="value2" />
+        <span id="equal">=</span>
+        <span id="result">result</span>
+      </div>
+      <div class="btns_div">
+        <button onclick="Add()" id="add">Add</button>
+        <button onclick="subtract()" id="sub">subtract</button>
+        <button onclick="multiply()" id="multi">multiply</button>
+        <button onclick="divide()" id="divide">divide</button>
+      </div>
+      <div class="borders">obrder prectice</div>
+    </section>
+  </body>
+  <script>
+    let value1 = document.getElementById("value1").value;
+    let value2 = document.getElementById("value2").value;
+    let result = document.getElementById("result");
+    let symbol = document.getElementById("symbol");
+    function updateValues() {
+      value1 = document.getElementById("value1").value;
+      value2 = document.getElementById("value2").value;
+      console.log(",", value1, ",", value2, ",");
+    }
+    function Add() {
+      updateValues();
+      symbol.innerText = "+";
+      if (value1 == "" || value2 == "") {
+        document.getElementById("errorMsg").innerText =
+          "please enter all the flids";
+      } else {
+        document.getElementById("errorMsg").innerText = "";
+        result.innerHTML = +value1 + +value2;
+      }
+    }
+    function subtract() {
+      updateValues();
+      symbol.innerText = "-";
+      if (value1 == "" || value2 == "") {
+        document.getElementById("errorMsg").innerText =
+          "please enter all the flids";
+      } else {
+        document.getElementById("errorMsg").innerText = "";
+        result.innerHTML = +value1 - +value2;
+      }
+    }
+    function multiply() {
+      updateValues();
+      symbol.innerText = "+";
+      if (value1 == "" || value2 == "") {
+        document.getElementById("errorMsg").innerText =
+          "please enter all the flids";
+      } else {
+        document.getElementById("errorMsg").innerText = "";
+        result.innerHTML = +value1 * +value2;
+      }
+    }
+    function divide() {
+      updateValues();
+      symbol.innerText = "/";
+      if (value1 == "" || value2 == "") {
+        document.getElementById("errorMsg").innerText =
+          "please enter all the flids";
+      } else if (value2 == 0) {
+        document.getElementById("errorMsg").innerText =
+          "can not divide by zero";
+      } else {
+        document.getElementById("errorMsg").innerText = "";
+        result.innerHTML = +value1 / +value2;
+      }
+    }
+  </script>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>05.png</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        /* border: 1px solid; */
+      }
+      body {
+        height: 100vh;
+      }
+      section {
+        border: 10px solid green;
+        height: 93.3%;
+        padding: 1%;
+        background: rgb(199, 240, 199);
+        display: flex;
+        flex-direction: column;
+      }
+      div {
+        margin: 5px;
+      }
+      .first_row {
+        height: 100px;
+        display: flex;
+        border: 5px solid blue;
+        background: rgb(173, 216, 230);
+        flex-grow: 1;
+        padding: 10px;
+      }
+      .first_row > div {
+        flex-grow: 1;
+        border: 5px solid rgb(247, 128, 114);
+        background: rgb(252, 218, 185);
+        display: flex;
+        padding: 10px;
+      }
+      .first_row > div > div {
+        flex-grow: 1;
+        margin: 0;
+        border: 5px solid red;
+        background: rgb(250, 192, 203);
+      }
+      .mid_row {
+        /* height: 500px; */
+        display: flex;
+        flex-grow: 2;
+      }
+      .mid_row div {
+        background: rgb(250, 187, 187);
+        border: 5px solid rgb(129, 2, 2);
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+      .mid_row > :nth-child(2) {
+        border: 0;
+        margin: 0;
+        background: none;
+      }
+      .mid_row > div > div {
+        flex-grow: 1;
+      }
+      .last_row {
+        flex-grow: 1;
+        height: 100px;
+        display: flex;
+        border: 5px solid blue;
+        background: rgb(173, 216, 230);
+      }
+      .last_row > div {
+        flex-grow: 1;
+        border: 5px solid red;
+        display: flex;
+      }
+      .last_row>:nth-child(2){
+        border: none;
+      }
+      .last_row > div > div {
+        border: 5px solid rgb(247, 128, 114);
+        flex-grow: 1;
+        margin: 0 10px;
+        background: rgb(252, 218, 185);
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="first_row">
+        <div></div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+      <div class="mid_row">
+        <div></div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+      <div class="last_row">
+        <div></div>
+        <div>
+          <div></div>
+          <div></div>
+        </div>
+        <div></div>
+      </div>
+    </section>
+  </body>
+</html>

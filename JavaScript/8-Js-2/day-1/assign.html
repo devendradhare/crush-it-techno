@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="display"></h1>
+    <button onclick="hello()" id="btn">Ravi</button>
+    <button onclick="bye()">Bye</button>
+  </body>
+
+  <script>
+    let btn = document.getElementById("btn").innerText;
+
+    function hello() {
+      document.getElementById("display").innerText = "Hello" + " " + btn;
+      // console.log(btn);
+    }
+
+    function bye() {
+      document.getElementById("display").innerText = "Bye" + " " + btn;
+      // console.log(btn);
+    }
+  </script>
+</html>

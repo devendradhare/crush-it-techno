@@ -1,0 +1,57 @@
+1 Printing Even Numbers:
+Write a program to print all even numbers from 1 to a given positive integer n using a for loop.
+Input: A positive integer n.
+
+2 Factorial Calculation:
+Write a program to calculate the factorial of a given non-negative integer n using a for loop.
+Input: A non-negative integer n.
+
+3 Multiplication Table:
+Write a program to print the multiplication table of a given integer up to a specified range using nested for loops.
+Input: An integer and the range (both integers).
+
+4 Printing Patterns:
+Write a program to print the following pattern using nested for loops:
+
+markdown
+*
+* *
+* * *
+* * * *
+Input: None.
+
+5 Prime Number Check:
+Write a program to check whether a given integer is a prime number or not using a for loop.
+Input: An integer.
+
+6 Pyramid Pattern:
+Write a program to print the following pyramid pattern using nested for loops:
+
+markdown
+    *
+   * *
+  * * *
+ * * * *
+Input: None.
+
+7 Sum of Digits:
+Write a program to calculate the sum of digits of a given integer using a for loop.
+Input: An integer.
+
+Number of Digits:
+Write a program to count the number of digits in a given integer using a for loop.
+Input: An integer.
+
+8 Printing Prime Numbers:
+Write a program to print all prime numbers within a given range using nested for loops.
+Input: The range (two integers).
+
+9 Printing Patterns with Numbers:
+Write a program to print the following pattern using nested for loops:
+
+
+1
+1 2
+1 2 3
+1 2 3 4
+Input: None.

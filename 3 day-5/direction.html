@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    #flex-container{
+        height: 400px;
+        background-color: aqua;
+        display: flex;
+        /* flex-direction: row; default */
+        /* flex-direction: column; */
+        /* flex-direction: column-reverse; */
+        flex-direction: row-reverse;
+    }
+
+
+    #flex-container>div{
+        width: 200px;
+        height: 200px;
+        border: 2px solid ;
+    }
+    #flex-container>div:nth-child(1){
+        background-color: red;
+    }
+    #flex-container>div:nth-child(2){
+        background-color: blue;
+    }
+    #flex-container>div:nth-child(3){
+        background-color: yellow;
+    }
+    #flex-container>div:nth-child(4){
+        background-color: green;
+    }
+</style>
+
+</head>
+<body>
+    <div id="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+    </div>
+</body>
+</html>

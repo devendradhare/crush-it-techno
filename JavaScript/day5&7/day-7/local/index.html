@@ -1,0 +1,42 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <ul type="none">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./mens.html">Mens</a></li>
+            <li><a href="./women.html">Womens</a></li>
+        </ul>
+    </div>
+
+    <form action="">
+        <input id="email" type="email" >
+        <input type="submit">
+    </form>
+</body>
+
+<script>
+    document.querySelector("form").addEventListener("submit", handlesubmit)
+
+   function handlesubmit(){
+    event.preventDefault();
+ 
+    let email = document.getElementById("email").value;
+
+    if(email=="ravi@gmail.com"){
+       window.location.href = "./mens.html"
+    }
+    else{
+        alert("Please enter correct email address")
+    }
+   
+  //  console.log("Hello");
+   }
+
+   //console.log(window.location.href);
+</script>
+</html>

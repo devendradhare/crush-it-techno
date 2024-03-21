@@ -1,0 +1,99 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- <div>
+        <h1 id="head" class="box"></h1>
+        <h1 class="box">box-2</h1>
+        <h1 class="box">box-3</h1>
+        <h1 class="box">box-4</h1>
+        <button>click</button>
+    </div> -->
+
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>Password</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- append -->
+      </tbody>
+    </table>
+
+    <form action="">
+      <input id="email" placeholder="enter email" type="email" />
+      <input id="password" placeholder="enter password" type="password" />
+      <input type="submit" />
+    </form>
+  </body>
+  <!-- <script>
+ let head1 = document.getElementById("head");
+
+// console.log(head1);
+
+// let box  = document.getElementsByClassName("box");
+// // box[1].style.color = "red"
+// for(let i=0; i<box.length; i++){
+//     box[i].style.color = "blue"
+// }
+
+// let box  = document.querySelector(".box");
+// console.log(box);
+
+let box  = document.querySelectorAll(".box");
+console.log(box[2].style.color = "red");
+
+
+document.querySelector("button").addEventListener("click",clickfun)
+
+function clickfun(){
+   // console.log("clickfun");
+  head1.innerText = "Click"
+}
+
+
+</script> -->
+
+  <script>
+    let tbody = document.querySelector("tbody");
+    document.querySelector("form").addEventListener("submit", submitfun);
+
+    function submitfun() {
+      event.preventDefault();
+
+      let email = document.getElementById("email").value;
+      let password = document.getElementById("password").value;
+
+      let arr = [];
+      let dataobj = {
+        email: email,
+        password: password,
+      };
+
+      arr.push(dataobj);
+      console.log(arr);
+
+      // console.log("hello");
+      //   console.log(email, password);
+
+      for (let i = 0; i < arr.length; i++) {
+        let row = document.createElement("tr");
+
+        let col1 = document.createElement("td");
+        col1.innerText = email;
+
+        let col2 = document.createElement("td");
+        col2.innerText = password;
+
+        row.append(col1, col2);
+
+        tbody.append(row);
+      }
+    }
+  </script>
+</html>

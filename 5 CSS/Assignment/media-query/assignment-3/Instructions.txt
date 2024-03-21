@@ -1,0 +1,53 @@
+Instructions
+
+
+Statement:-
+
+Build the following layout using methods mentioned:- template1
+Download the template and start coding Doctor-Template.zip
+For understanding each section see this image:- Sections.png
+
+
+Banner Section:-
+
+Use flex method to achieve the banner section.
+Use combinators wherever needed and keep usage of classes and id's limited.
+Apply Media queries: Using flex
+
+Large screens : Default
+Medium screens and small screens: flex direction column
+Use this image for the banner https://www.practostatic.com/consumer-home/practo-care/1631634827/dweb_hero_banner.png
+
+
+Services Section:-
+
+Use Grid method to achieve the services-section
+Use this image for all the cards:- https://www.practostatic.com/consumer-home/desktop/images/1597423628/dweb_instant_video_consulation.png
+Use combinators wherever needed and keep usage of classes and id's limited.
+
+Apply Media queries: Using grid properties
+
+Large screens : All 6 cards in one row(Default).
+Medium screens : 3 cards per row
+Small screens : 2 cards per row.
+
+for box shadows you can use https://getcssscan.com/css-box-shadow-examples.
+You can use any font-family but make sure they are close to given layout.
+Write clean code with proper naming and indentation.
+
+
+Works Section:-
+
+Use Grid method to achieve the works-section
+Use this image for all the cards:- https://www.practostatic.com/consumer-home/desktop/images/1558283618/sp-dentist@2x.jpg
+Use combinators wherever needed and keep usage of classes and id's limited.
+
+Apply Media queries: Using grid properties
+
+Large screens : 4 cards per row(Default).
+Medium screens : 2 cards per row
+Small screens : 1 cards per row.
+
+for box shadows you can use https://getcssscan.com/css-box-shadow-examples.
+You can use any font-family but make sure they are close to given layout.
+Write clean code with proper naming and indentation.

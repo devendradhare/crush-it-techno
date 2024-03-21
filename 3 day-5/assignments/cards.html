@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cards</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        font-family: "Roboto", sans-serif;
+      }
+      body {
+        display: flex;
+        justify-content: center;
+      }
+      section {
+        width: 90%;
+        height: 95%;
+      }
+      .first {
+        margin: 20px 0;
+        padding: 20px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius: 5px;
+      }
+      .heading {
+        display: flex;
+        align-items: center;
+      }
+      .heading > h1 {
+        color: blue;
+        margin: 0 20px;
+      }
+      .fireLogo {
+        width: 34px;
+        height: 34px;
+        background: rgb(231, 176, 28);
+      }
+      .all_cards {
+        display: flex;
+        flex-wrap: wrap;
+      }
+      .cards {
+        width: 30%;
+        display: flex;
+        margin: 1% 5%;
+        justify-content: space-around;
+      }
+      .cards > div:nth-child(2) {
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .cards > div:nth-child(2) > span {
+        color: gray;
+      }
+      .cards > div:nth-child(2) > span > span {
+        color: blue;
+      }
+      .cardImg {
+        width: 250px;
+        height: 150px;
+        background: blue;
+        border-radius: 10px;
+      }
+      .second {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        padding: 20px;
+      }
+      .search {
+        display: flex;
+        align-items: center;
+        /* background: #000; */
+      }
+      .search > input {
+        flex-grow: 1;
+        margin: 20px 30px;
+        height: 50px;
+        border-radius: 30px;
+        outline: none;
+        padding: 5px 20px;
+      }
+      .search > button {
+        margin: 20px 30px;
+        height: 50px;
+        border-radius: 30px;
+        outline: none;
+        padding: 5px 50px;
+        background: blue;
+        color: white;
+        font-size: 20px;
+      }
+      .bigImg {
+        width: 100%;
+        height: 150px;
+        background: blue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-size: 30px;
+        border-radius: 10px;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+      .threeCards {
+        display: flex;
+        justify-content: space-between;
+        line-height: 2;
+        margin: 30px;
+      }
+      .threeCards >div{
+        flex-grow: 1;
+        margin: 2% 5%;
+      }
+      .bigCard>h3{
+        color: rgb(71, 71, 71);
+      }
+      .bigCard>span{
+        color: gray;
+      }
+      .bigCard>span>span{
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="first">
+        <div class="heading">
+          <div class="fireLogo"></div>
+          <h1>Top Articles</h1>
+        </div>
+        <div class="all_cards">
+          <div class="cards">
+            <div class="cardImg"></div>
+            <div>
+              <h3>How to design in a logo in 5 steps</h3>
+              <span>by <span>Ahmad Shadeed</span></span>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="cardImg"></div>
+            <div>
+              <h3>How to design in a logo in 5 steps</h3>
+              <span>by <span>Ahmad Shadeed</span></span>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="cardImg"></div>
+            <div>
+              <h3>How to design in a logo in 5 steps</h3>
+              <span>by <span>Ahmad Shadeed</span></span>
+            </div>
+          </div>
+          <div class="cards">
+            <div class="cardImg"></div>
+            <div>
+              <h3>How to design in a logo in 5 steps</h3>
+              <span>by <span>Ahmad Shadeed</span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="second">
+        <div class="heading">
+          <div class="fireLogo"></div>
+          <h1>Top Articles</h1>
+        </div>
+        <div class="search">
+          <input type="text" placeholder="What are you looking for?" />
+          <button>Search</button>
+        </div>
+        <hr>
+        <div class="threeCards">
+          <div class="bigCard">
+            <div class="bigImg">img1</div>
+            <h3>How to design logo in 5 steps</h3>
+            <span>by <span>devendra dhare</span></span>
+          </div>
+          <div class="bigCard">
+            <div class="bigImg">img2</div>
+            <h3>How to design logo in 5 steps</h3>
+            <span>by <span>devendra dhare</span></span>
+          </div>
+          <div class="bigCard">
+            <div class="bigImg">img3</div>
+            <h3>How to design logo in 5 steps</h3>
+            <span>by <span>devendra dhare</span></span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

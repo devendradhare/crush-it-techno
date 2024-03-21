@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gird 1 problem</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      section {
+        width: 60%;
+
+        display: grid;
+        gap: 10px;
+        grid-template-areas: "A A B B" "C D D D" "E E E E";
+      }
+      .tabs {
+        background: rgb(68, 68, 68);
+        border-radius: 10px;
+        color: white;
+        height: 100px;
+        font-size: 2.5rem;
+        padding-left: 40px;
+        display: flex;
+        align-items: center;
+      }
+      .tabsA {
+        grid-area: A;
+      }
+      .tabsB {
+        grid-area: B;
+      }
+      .tabsC {
+        grid-area: C;
+      }
+      .tabsD {
+        grid-area: D;
+      }
+      .tabsE {
+        grid-area: E;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div class="tabs tabsA">A</div>
+      <div class="tabs tabsB">B</div>
+      <div class="tabs tabsC">C</div>
+      <div class="tabs tabsD">D</div>
+      <div class="tabs tabsE">E</div>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container > .parent  .child .grandchild > p {
+    color: red;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+    <div class="parent">
+        <p>This should not be styled. 1</p>
+        <div class="child">
+            <p>This should be styled.</p>
+            <div>
+                <p>This should not be styled.</p>
+                <div class="grandchild">
+                    <p>This should be styled. 2</p>
+                    <div>
+                        <p>This should not be styled.</p>
+                    </div>
+                    <p>this is 3</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="parent">
+        <p>This should not be styled.</p>
+        <div class="child">
+            <p>This should be styled.</p>
+            <div>
+                <p>This should not be styled.</p>
+                <div class="grandchild">
+                    <p>This should be styled.</p>
+                    <div>
+                        <p>This should not be styled.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

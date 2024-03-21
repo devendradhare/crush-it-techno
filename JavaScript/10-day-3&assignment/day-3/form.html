@@ -1,0 +1,41 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form > 
+    <input id="username" type="text">
+    <input id="password" type="password">
+    <select name="gender" id="">
+        <option value="M">Male</option>
+        <option value="F">Female</option>
+    </select>
+    <input type="submit">
+    </form>
+
+    <h1 id="dis1"></h1>
+    <h2 id="dis2"></h2>
+
+</body>
+
+<script>
+    document.querySelector("form").addEventListener("submit", func1)
+
+    function func1() {
+        event.preventDefault();
+ 
+        let a =document.getElementById("username").value
+       let b = document.getElementById("password").value
+     //  console.log(a,b);
+
+     document.getElementById("dis1").innerText = a
+     document.getElementById("dis2").innerText = b
+
+       // alert("hello")
+        // console.log("hello form");
+    }
+</script>
+</html>
