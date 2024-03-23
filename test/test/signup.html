@@ -1,0 +1,43 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./mens.html">Mens</a></li>
+        <li><a href="./womens">Women</a></li>
+      </ul>
+    </nav>
+
+    <form>
+      <input type="text" id="name" placeholder="Enter your name" required />
+      <input type="email" id="email" placeholder="Enter your email" required />
+      <input type="number" id="mobile" placeholder="enter mobile" required />
+      <input type="password" id="password" placeholder="enter password" required />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    let myForm = document.querySelector("form");
+    let signUp_users = JSON.parse(localStorage.getItem("signUp_users")) || [];
+
+    myForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let user_obj = {
+        name: myForm.name.value,
+        email: myForm.email.value,
+        number: myForm.mobile.value,
+        password: myForm.password.value,
+      };
+      signUp_users.push(user_obj);
+      localStorage.setItem("signUp_users", JSON.stringify(signUp_users));
+      alert("signin successful");
+
+      window.location.href = "./login.html";
+    });
+  </script>
+</html>

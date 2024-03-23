@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="./signup.html">Signup</a></li>
+      </ul>
+    </nav>
+
+    <form>
+      <input id="email" type="email" placeholder="Enter your name" required/>
+      <input id="password" type="password" placeholder="enter password" required/>
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    let myForm = document.querySelector("form");
+    let signUp_users = JSON.parse(localStorage.getItem("signUp_users")) || [];
+
+    myForm.addEventListener("submit", function (event) {
+      event.preventDefault();
+      let email = myForm.email.value;
+      let password = myForm.password.value;
+
+      let check = signUp_users.find(function (el) {
+        // console.log(el.email == email && el.password == password);
+        return el.email == email && el.password == password;
+      });
+
+      if (check != undefined) {
+        alert("signin successful");
+        window.location.href = "./index.html";
+      } else {
+        alert("wrong email or password");
+      }
+
+      // window.location.href = "./login.html";
+    });
+  </script>
+</html>

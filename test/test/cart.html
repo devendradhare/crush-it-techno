@@ -1,0 +1,61 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #cart {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 20px;
+      }
+      #cart > div {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Totol amount <span id="total">0</span></h1>
+    <a href="./index.html">go to index</a>
+    <div id="cart"></div>
+  </body>
+  <script>
+    let myData = JSON.parse(localStorage.getItem("cartData")) || [];
+    let total = 0;
+    display();
+    function display() {
+      myData.forEach(function (el, index) {
+        let cart = document.getElementById("cart");
+        let card = document.createElement("div");
+
+        let img = document.createElement("img");
+        img.src = el.images[0].href;
+        // img.src = "https://images.pexels.com/photos/1657378/pexels-photo-1657378.jpeg?auto=compress&cs=tinysrgb&w=600";
+
+        let title = document.createElement("h3");
+        title.innerText = el.title;
+
+        let price = document.createElement("div");
+        price.innerText = "price : " + el.price;
+
+        let description = document.createElement("p");
+        description.innerText = el.description;
+
+        let removeFromCart = document.createElement("button");
+        removeFromCart.innerText = "remove from Card";
+        removeFromCart.addEventListener("click", function (event) {
+          myData.splice(index, 1);
+          localStorage.setItem("cartData", JSON.stringify(myData));
+          cart.innerHTML = "";
+          display();
+        });
+
+        card.append(img, title, price, description, removeFromCart);
+        cart.append(card);
+
+        document.getElementById("total").innerHTML = myData.length;
+      });
+    }
+  </script>
+</html>

@@ -1,0 +1,65 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SignUp</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="./login.html">Login</a></li>
+        <li><a href="./mens.html">Mens</a></li>
+        <li><a href="./womens">Women</a></li>
+      </ul>
+    </nav>
+
+    <form>
+      <input id="name" type="text" placeholder="Enter your name" />
+      <input type="email" name="" id="email" placeholder="Enter your email" />
+      <input type="number" placeholder="enter mobile" id="mobile" />
+      <input type="password" placeholder="enter password" id="password" />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    let form = document.querySelector("form");
+    let form_arr = JSON.parse(localStorage.getItem("signup")) || [];
+    form.addEventListener("submit", formdata);
+
+    function formdata() {
+      event.preventDefault();
+
+      let form_obj = {
+        name: form.name.value,
+        email: form.email.value,
+        mobile: form.mobile.value,
+        password: form.password.value,
+      };
+
+      if (form_obj.name == "") {
+        alert("please enter your name");
+        return;
+      } else if (form_obj.email == "") {
+        alert("please enter your email");
+        return;
+      } else if (form_obj.mobile == "") {
+        alert("please enter your mobile");
+        return;
+      } else if (form_obj.password == "") {
+        alert("please enter your password");
+        return;
+      }
+    
+
+      form_arr.push(form_obj);
+      alert("signup successful")
+      window.location.href = "./login.html";
+      localStorage.setItem("signup", JSON.stringify(form_arr));
+      // console.log(form_arr);
+
+     
+    }
+
+     //console.log(window.location.href);
+  </script>
+</html>

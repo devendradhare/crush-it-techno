@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="./signup.html">Signup</a></li>
+        <li><a href="./mens.html">Mens</a></li>
+        <li><a href="./womens">Women</a></li>
+      </ul>
+    </nav>
+
+    <form>
+      <input id="email" type="email" placeholder="Enter your name" />
+      <input type="password" placeholder="enter password" id="password" />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    let form = document.querySelector("form");
+    form.addEventListener("submit", loginfunc);
+
+    let signup_data = JSON.parse(localStorage.getItem("signup")) || [];
+    console.log(signup_data);
+
+    function loginfunc(e) {
+       e.preventDefault();
+      if (signup_data.length === 0) {
+        alert("No User till now...");
+        return;
+      }
+
+      let obj = {
+            email:form.email.value,
+            password:form.password.value
+      }
+ 
+      signup_data.forEach(function(ele,index){
+      // console.log(ele, index);
+      //console.log(ele.email, ele.password);
+      if(ele.email == obj.email  && ele.password == obj.password){
+        localStorage.setItem("signin", JSON.stringify(ele));
+        alert("login successful")
+        window.location.href = "./index.html"
+      }
+      else{
+        alert("Wrong Credentials")
+      }
+
+      })
+
+    }
+  </script>
+</html>
